@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze Traversal Comparison</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="controls">
+    <button class="initialize" onclick="initializeMaze()">Initialize Maze</button>
+    <button class="start_button" onclick="startTraversal()">Start</button>
+  </div>
+
+  <div>
+    <p class="pikachu">BFS</p>
+    <p class="doraemon">DFS</p>
+    <p class="shinchan">A*</p>
+    <p class="batman">DIJKSTRA</p>
+  </div>
+
+  <div class="maze-container">
+    <div class="maze mazer" id="maze-bfs"></div>
+    <div class="maze mazel" id="maze-dfs">DFS</div>
+    <div class="maze mazer" id="maze-astar">A*</div>
+    <div class="maze mazel" id="maze-dijkstra">Dijkstra</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  /* background: linear-gradient(to bottom, #f0e6f6, #d0c6e3); */
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.pikachu, .doraemon, .shinchan, .batman {
+  margin: 0;              /* Remove any default margin */
+  padding: 0;             /* Remove any default padding */
+  display: inline-block;  /* Only take up as much space as the text requires */
+  font-weight: bold;
+}
+
+.pikachu{
+  right: 108px;
+  top: 140px;
+  position: relative;
+}
+
+.doraemon{
+  position: relative;
+  top: 140px;
+  left: 120px;
+}
+
+.shinchan{
+  position: relative;
+  top: 80vh;
+  right: 170px;
+}
+
+.batman{
+  position: relative;
+  top: 80vh;
+  left: 41px;
+}
+
+
+
+.maze-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 20px; /* Space between grids */
+  width: 100%;
+  /* margin-left: 30px; */
+}
+
+.maze {
+  display: grid;
+  gap: 2px;
+  border: 10px solid #333;
+  width: 340px; /* Width adjustment for a more compact 2x2 layout */
+}
+
+.mazel{
+  margin-left: 150px;
+}
+
+.mazer{
+  margin-left: 50px;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+
+.start {
+  background-color: green;
+}
+
+.end {
+  background-color: red;
+}
+
+.obstacle {
+  background-color: black;
+}
+
+.path {
+  background-color: white;
+}
+
+.visited {
+  background-color: #4dd146;
+}
+
+.current {
+  background-color: yellow;
+}
+
+.initialize{
+  background-color: #49aca6;
+  border-radius: 12px;
+  border: 1px solid green;
+  color: white;
+  font-weight: bold;
+}
+
+.start_button{
+  background-color: #57d350;
+  border-radius: 12px;
+  border: 1px solid green;
+  color: white;
+  font-weight: bold;
+}
+
+
+/* Add animation for endpoint when reached */
+@keyframes endpoint-pulse {
+  0% {
+    background-color: red;
+    transform: scale(1);
+  }
+  50% {
+    background-color: #ff4040; /* Lighter shade */
+    transform: scale(1.1);
+  }
+  100% {
+    background-color: red;
+    transform: scale(1);
+  }
+}
+
+.endpoint-reached {
+  animation: endpoint-pulse 0.5s infinite;
+}
+
